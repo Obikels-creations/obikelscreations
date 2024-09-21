@@ -12,8 +12,8 @@ export function HomePageComp() {
   })
 
   useEffect(() => {
-    const targetDate = new Date('2024-12-31T23:59:59').getTime()
-    
+    const targetDate = new Date('2024-10-10T23:59:59').getTime()
+
     const interval = setInterval(() => {
       const now = new Date().getTime()
       const difference = targetDate - now
@@ -39,7 +39,7 @@ export function HomePageComp() {
       <div className="text-center text-white p-8 rounded-lg shadow-2xl bg-black bg-opacity-50 backdrop-blur-md">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{`Welcome To Obikels Creations`}</h1>
         <p className="text-2xl md:text-3xl mb-6">{`Work In Progress`} </p>
-        <div className="justify-center items-center"><ConstructionIcon className='w-24 h-24'/></div>
+        <div className="justify-center items-center grid mx-auto"><ConstructionIcon className='w-24 h-24'/></div>
         <p className="text-xl md:text-2xl mb-8">{`We'll Be Live In`}</p>
         <div className="flex justify-center space-x-4 text-3xl md:text-4xl font-bold">
           <div>
