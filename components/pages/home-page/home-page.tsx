@@ -37,9 +37,9 @@ export function HomePageComp() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
       <div className="text-center text-white p-8 rounded-lg shadow-2xl bg-black bg-opacity-50 backdrop-blur-md">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Welcome To Obikels Creations</h1>
-        <p className="text-2xl md:text-3xl mb-6">Work In Progress <ConstructionIcon/></p>
-        <p className="text-xl md:text-2xl mb-8">We'll Be Live In</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">{`Welcome To Obikels Creations`}</h1>
+        <p className="text-2xl md:text-3xl mb-6">{`Work In Progress`} <ConstructionIcon/></p>
+        <p className="text-xl md:text-2xl mb-8">{`We'll Be Live In`}</p>
         <div className="flex justify-center space-x-4 text-3xl md:text-4xl font-bold">
           <div>
             <span>{timeLeft.days.toString().padStart(2, '0')}</span>
