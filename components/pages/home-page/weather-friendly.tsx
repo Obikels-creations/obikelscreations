@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { Sun, Snowflake, Cloud, Wind } from 'lucide-react'
 import MaxWidthWrapper from '@/components/layouts/max-width-wrapper'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { Cloud, Snowflake, Sun, Wind } from 'lucide-react'
+import { useRef } from 'react'
 
 const weatherInfo = [
   { 

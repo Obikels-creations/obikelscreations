@@ -1,10 +1,9 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
-import MaxWidthWrapper from '@/components/layouts/max-width-wrapper'
+import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
 
 const testimonials = [
   {

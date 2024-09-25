@@ -1,9 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 const images = [
   '/images/accessories/bucket_hats/IMG_20240428_205406.jpg',

@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import MaxWidthWrapper from './layouts/max-width-wrapper'
 
 export function CallToActionComponent() {
   return (
