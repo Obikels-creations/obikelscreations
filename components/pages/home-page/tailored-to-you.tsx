@@ -33,7 +33,7 @@ export function TailoredToYouComponent() {
     <MaxWidthWrapper>
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-4">Tailored to You</h2>
+        <h2 className="text-3xl font-bold font-serif text-center mb-4">Tailored to You</h2>
         <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
           {`At Obikels Creations, we believe that fashion should be personal. That's why we
 offer a wide range of made-to-order and customized designs. From classic to
@@ -53,7 +53,7 @@ perfect fit.`}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <step.icon className="w-12 h-12 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+              <h3 className="text-xl font-serif font-semibold mb-2">{step.title}</h3>
               <p className="text-sm max-w-[200px]">{step.description}</p>
             </motion.div>
           ))}
@@ -64,7 +64,7 @@ perfect fit.`}
         </Button>
 
         <div className="bg-muted p-8 rounded-lg max-w-2xl mx-auto">
-          <h3 className="text-2xl font-semibold mb-4">Choose Your Yarn</h3>
+          <h3 className="text-2xl md:text-3xl font-serif font-semibold mb-4">Choose Your Yarn</h3>
           <p className="mb-6">Select your favorite yarn type and see how it might look on a product:</p>
           <RadioGroup onValueChange={setSelectedYarn} className="grid grid-cols-2 gap-4">
             {yarnTypes.map((yarn) => (
@@ -79,7 +79,7 @@ perfect fit.`}
           </RadioGroup>
           {selectedYarn && (
             <div className="mt-8">
-              <h4 className="text-lg font-semibold mb-2">Your Selection:</h4>
+              <h4 className="text-lg font-serif font-semibold mb-2">Your Selection:</h4>
               <div className="bg-background p-4 rounded-lg flex items-center">
                 <span className={`w-8 h-8 rounded-full mr-4 ${yarnTypes.find(y => y.id === selectedYarn)?.color}`}></span>
                 <span>{yarnTypes.find(y => y.id === selectedYarn)?.name}</span>

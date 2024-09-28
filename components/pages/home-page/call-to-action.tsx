@@ -7,7 +7,7 @@ export function CallToActionComponent() {
   return (
     <section className="relative py-24 overflow-hidden">
       <div 
-        className="absolute inset-0 z-0 bg-slate-950/50 bg-opacity-30"
+        className="absolute inset-0 z-0 bg-slate-900 bg-opacity-50 md:bg-slate-950/50 md:bg-opacity-30"
         style={{
           backgroundImage: "url('/yarn-texture.jpg')",
           backgroundSize: 'cover',
@@ -17,7 +17,7 @@ export function CallToActionComponent() {
         aria-hidden="true"
       />
       <div className="container relative z-10 mx-auto px-4 text-center">
-        <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-white">
+        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">
           Join the Crochet Movement
         </h2>
         <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">

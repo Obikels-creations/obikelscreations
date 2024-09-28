@@ -62,7 +62,7 @@ export function WeatherFriendlyComponent() {
         style={{ backgroundClip: currentBackgroundClass }}
       />
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl font-serif font-bold mb-8 text-center">Weather-Friendly and Skin-Kind</h2>
+        <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-center">Weather-Friendly and Skin-Kind</h2>
         <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
           {`Our crochet garments are designed to be both comfortable and functional. We
 carefully select materials that are suitable for various weather conditions, ensuring
@@ -83,7 +83,7 @@ wearability.`}
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <info.icon className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{info.title}</h3>
+              <h3 className="text-xl font-serif font-semibold mb-2">{info.title}</h3>
               <p className="text-muted-foreground">{info.description}</p>
             </motion.div>
           ))}

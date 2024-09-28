@@ -5,6 +5,7 @@ import {
   useTransform
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import MaxWidthWrapper from "../layouts/max-width-wrapper";
 
 interface TimelineEntry {
   title: string;
@@ -32,19 +33,21 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
+    <MaxWidthWrapper>
     <div
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Changelog from my journey
+      <div className="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-10">
+        <h2 className="text-lg md:text-4xl font-serif mb-4 text-black dark:text-white max-w-4xl">
+        A Journey of Yarn and Creativity
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
+        <p className="text-neutral-700 dark:text-neutral-300 text-lg md:text-lg max-w-lg">
+          {`Obikels Creations Ltd was born out of a passion for crochet and a desire to create
+unique, handcrafted garments. `}
         </p>
       </div>
+      
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
@@ -56,13 +59,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
+              <h3 className="hidden font-serif md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
                 {item.title}
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+            <div className="relative pl-20  pr-4 md:pl-4 w-full">
+              <h3 className="md:hidden block  text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
               {item.content}{" "}
@@ -84,6 +87,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           />
         </div>
       </div>
+      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+        <p className="text-neutral-700 dark:text-neutral-300 text-lg md:text-xl max-w-xl">
+          {`Thank you for choosing Obikels Creations Ltd. We invite you to join us on this
+exciting journey of creativity and passion.`}
+        </p>
+      </div>
     </div>
+    </MaxWidthWrapper>
   );
 };

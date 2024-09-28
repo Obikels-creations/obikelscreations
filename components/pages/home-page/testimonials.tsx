@@ -8,37 +8,44 @@ import { useEffect, useRef, useState } from 'react'
 const testimonials = [
   {
     id: 1,
-    name: "Emily Johnson",
-    avatar: "/cotton-yarn.jpg",
-    review: "The crochet sweater I ordered is absolutely beautiful! The attention to detail is amazing, and it's so comfortable to wear.",
+    name: "Olufisayo Alabi",
+    avatar: "/images/reviews/Olufisayo-Alabi.jpeg",
+    review: "Still rocking it till date! I still brought it to the UK with me lol!..",
     rating: 5,
   },
   {
     id: 2,
-    name: "Michael Chen",
-    avatar: "/cotton-yarn.jpg",
-    review: "I'm impressed by the quality of the crochet scarf. It's warm, stylish, and I receive compliments every time I wear it.",
-    rating: 4,
+    name: "Ayodele Oladuti",
+    avatar: "/images/reviews/ayodele-oladuti.webp",
+    review: "The item is just as described and personalised how I needed it to be. It was made and shipped quickly and my communication with Obikels Creations was easy and efficient.",
+    rating: 5,
   },
   {
     id: 3,
-    name: "Sophia Rodriguez",
-    avatar: "/cotton-yarn.jpg",
-    review: "The custom crochet dress exceeded my expectations. It fits perfectly and the craftsmanship is outstanding.",
+    name: "Oritsesan Ebreme",
+    avatar: "/images/reviews/oritsesan-ebreme.webp",
+    review: "It is beyond beautiful 🤩 Neatly crafted and I could literally feel the love it was made with 😀 Definitely recommend this!",
     rating: 5,
   },
   {
     id: 4,
-    name: "David Thompson",
-    avatar: "/cotton-yarn.jpg",
-    review: "I love my crochet beanie! It's unique, cozy, and perfect for cold days. Will definitely order more items.",
-    rating: 3,
+    name: "Ifeoma Ajaero ",
+    avatar: "/images/accessories/bucket_hats/IMG_20240428_202448.jpg",
+    review: "The Odumodu hat is everything and more. A special gift for my husband. The African man in him will scream for joy when he sees it. He's going to love it. Neatly done, well crafted and depicts a proud igbo man lol. Igbo kwenu!",
+    rating: 5,
   },
   {
     id: 5,
-    name: "Olivia Parker",
-    avatar: "/cotton-yarn.jpg",
-    review: "The crochet blanket I received is a work of art. It's become the centerpiece of my living room. Thank you!",
+    name: "Ifeoma Ajaero ",
+    avatar: "/images/accessories/bucket_hats/IMG_20240428_202448.jpg",
+    review: "Great quality, well crafted, I love it. My daughter has already started showing me different ways I can style the hat. I can wait to start rocking it. Thank you for giving me exactly what I requested for.",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Nene Leke",
+    avatar: "/images/reviews/nene-leke.jpg",
+    review: "Your work and creativity deserves it all! I admire hrd working beautiful ladies like you. I am very proud of you.",
     rating: 5,
   },
 ]
@@ -69,9 +76,9 @@ export function TestimonialsComponent() {
   }, [duplicatedTestimonials])
 
   return (
-    <section className="py-16 bg-background overflow-hidden">
+    <section className="py-8 md:py-16 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <h2 className="text-2xl md:text-3xl font-serif font-bold text-center mb-8">What Our Customers Say</h2>
         <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
           {`Our customers love their unique, handmade crochet garments. Here's what they have to say about their Obikels Creations experience.`}
         </p>
@@ -85,16 +92,18 @@ export function TestimonialsComponent() {
               key={`${testimonial.id}-${index}`}
               className="flex-none w-80 bg-muted p-6 rounded-lg shadow-lg"
             >
-              <div className="flex items-center mb-4">
+              <div className="flex space-x-2 items-center mb-4">
+                <div className="h-full w-full">
                 <Image
                   src={testimonial.avatar}
                   alt={`Avatar of ${testimonial.name}`}
-                  width={48}
-                  height={48}
-                  className="rounded-full mr-4"
+                  width={50}
+                  height={50}
+                  className="rounded-full object-cover aspect-auto"
                 />
-                <div>
-                  <h3 className="font-semibold">{testimonial.name}</h3>
+                </div>
+                <div className=''>
+                  <h3 className="font-semibold font-serif">{testimonial.name}</h3>
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className={`w-5 h-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />

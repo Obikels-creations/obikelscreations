@@ -59,18 +59,18 @@ export function AboutUsPreviewComponent() {
     <MaxWidthWrapper>
     <section
       ref={sectionRef}
-      className={`py-16 bg-background transition-opacity duration-1000 ${
+      className={`py-8 md:py-16 bg-background transition-opacity duration-1000 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <div className="flex flex-col text-left items-left mb-4">
-              <h2 className="text-3xl font-bold">{`Welcome to Obikels Creations`}</h2>
-              <h3 className='text-xl font-semibold'>{`Where Crochet Meets Couture`}</h3>
+        <div className="flex flex-col md:flex-row md:items-start items-center justify-between">
+          <div className="md:w-1/2 w-full md:text-start text-center mb-8 md:mb-0">
+            <div className="flex flex-col items-center text-center md:text-start md:items-start mb-4">
+              <h2 className="text-3xl font-serif font-bold">{`Welcome to Obikels Creations`}</h2>
+              <h3 className='text-base md:text-xl font-serif font-semibold'>{`Where Crochet Meets Couture`}</h3>
             </div>
-            <p className="text-lg w-full pr-6 text-muted-foreground mb-6">
+            <p className="text-lg w-full md:pr-6 text-muted-foreground mb-6">
               {`Your destination for exquisite, handmade crochet
 apparel. Our passion lies in transforming yarn into stunning garments that are both
 comfortable and stylish. Whether you're looking for a unique piece for yourself or a
@@ -80,8 +80,8 @@ special gift, our collection offers something for everyone.`}
               <Link href="/about">Learn More</Link>
             </Button>
           </div>
-          <div className="md:w-1/2 relative">
-            <div className="relative w-full h-[400px]">
+          <div className="md:w-1/2 w-full relative">
+            <div className="md:relative w-full h-[400px]">
               {carouselImages.map((src, index) => (
                 <Image
                   key={src}

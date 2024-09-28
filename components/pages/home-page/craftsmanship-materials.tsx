@@ -16,7 +16,7 @@ export function CraftsmanshipMaterialsComponent() {
 
   return (
     <MaxWidthWrapper>
-    <section ref={containerRef} className="py-16 bg-background overflow-hidden">
+    <section ref={containerRef} className="py-4 md:py-16 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-serif font-bold mb-8 text-center">Craftsmanship & Materials</h2>
         <p className="text-lg text-muted-foreground mb-12 text-center max-w-3xl mx-auto">

@@ -3,6 +3,10 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { FooterComponent } from "@/components/layouts/footer";
 import { NavbarComponent } from "@/components/layouts/nav-bar";
+import NextTopLoader from "nextjs-toploader";
+
+
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,9 +34,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NavbarComponent/>
-        {children}
-        <FooterComponent/>
+          <div className="">
+            <NextTopLoader
+            color="#101819"
+            showSpinner={false}
+            />
+          <NavbarComponent/>
+          {children}
+          <FooterComponent/>
+        </div>
       </body>
     </html>
   );

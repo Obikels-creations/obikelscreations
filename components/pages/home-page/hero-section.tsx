@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
+import Link from "next/link"
 import { useEffect, useState } from 'react'
 
 const images = [
@@ -48,20 +49,22 @@ export function HeroSectionComponent() {
 
       {/* Yarn-like Overlay */}
       <div 
-        className="absolute inset-0 bg-gray-800/25 opacity-30"
+        className="absolute inset-0 z-0 bg-slate-950/20 bg-opacity-30"
 
       ></div>
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 shadow-text">
+        <h1 className="text-4xl font-serif md:text-6xl font-bold mb-4 shadow-text">
           Discover the Art of Crochet Fashion
         </h1>
         <p className="text-xl md:text-2xl mb-8 shadow-text">
           Handcrafted elegance for every occasion
         </p>
-        <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+        <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Link href='/gallery'>
           Explore Our Collection
+          </Link>
         </Button>
       </div>
 

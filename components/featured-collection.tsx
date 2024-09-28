@@ -4,27 +4,12 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
+import {products} from '@/lib/consts'
+import MaxWidthWrapper from '@/components/layouts/max-width-wrapper'
 
-type Product = {
-  id: number
-  name: string
-  description: string
-  image: string
-  category: string
-}
 
-const products: Product[] = [
-  { id: 1, name: "Cozy Sweater", description: "Warm and stylish for chilly days", image: "/placeholder.svg?height=400&width=300", category: "Adult" },
-  { id: 2, name: "Elegant Dress", description: "Perfect for special occasions", image: "/placeholder.svg?height=500&width=300", category: "Adult" },
-  { id: 3, name: "Cute Baby Booties", description: "Adorable and comfortable", image: "/placeholder.svg?height=300&width=300", category: "Kids" },
-  { id: 4, name: "Stylish Scarf", description: "Add a touch of elegance to any outfit", image: "/placeholder.svg?height=400&width=300", category: "Accessories" },
-  { id: 5, name: "Colorful Blanket", description: "Brighten up your living space", image: "/placeholder.svg?height=400&width=400", category: "Home" },
-  { id: 6, name: "Kids Cardigan", description: "Cute and practical for little ones", image: "/placeholder.svg?height=400&width=300", category: "Kids" },
-  { id: 7, name: "Trendy Handbag", description: "Handmade accessory for everyday use", image: "/placeholder.svg?height=300&width=300", category: "Accessories" },
-  { id: 8, name: "Lace Shawl", description: "Delicate and beautiful craftsmanship", image: "/placeholder.svg?height=500&width=300", category: "Adult" },
-]
 
-const categories = ["All", "Adult", "Kids", "Accessories", "Home"]
+const categories = ["All", "Adult", "Kids", "Accessories"]
 
 export function FeaturedCollectionComponent() {
   const [filter, setFilter] = useState("All")
@@ -34,6 +19,7 @@ export function FeaturedCollectionComponent() {
     : products.filter(product => product.category === filter)
 
   return (
+    <MaxWidthWrapper>
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-serif font-bold mb-8 text-center">Featured Collection</h2>
@@ -82,5 +68,6 @@ export function FeaturedCollectionComponent() {
         </div>
       </div>
     </section>
+    </MaxWidthWrapper>
   )
 }
