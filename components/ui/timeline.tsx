@@ -39,7 +39,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl font-serif mb-4 text-black dark:text-white max-w-4xl">
+        <h2 className="text-xl md:text-4xl font-serif mb-4 text-black dark:text-white max-w-4xl">
         A Journey of Yarn and Creativity
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-lg md:text-lg max-w-lg">
@@ -65,7 +65,7 @@ unique, handcrafted garments. `}
             </div>
 
             <div className="relative pl-20  pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block  text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+              <h3 className="md:hidden block font-serif text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
               {item.content}{" "}
@@ -88,7 +88,7 @@ unique, handcrafted garments. `}
         </div>
       </div>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <p className="text-neutral-700 dark:text-neutral-300 text-lg md:text-xl max-w-xl">
+        <p className="text-neutral-700 dark:text-neutral-300 font-medium text-lg md:text-xl max-w-xl">
           {`Thank you for choosing Obikels Creations Ltd. We invite you to join us on this
 exciting journey of creativity and passion.`}
         </p>

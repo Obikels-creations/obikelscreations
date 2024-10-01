@@ -6,64 +6,17 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import MaxWidthWrapper from '@/components/layouts/max-width-wrapper'
+import { products } from '@/lib/consts'
 
 const categories = [
   { id: 'all', name: 'All' },
   { id: 'ladies', name: 'Ladies Fashion' },
-  { id: 'gents', name: 'Gents Fashion' },
+  // { id: 'gents', name: 'Gents Fashion' },
   { id: 'kids', name: 'Kids' },
   { id: 'accessories', name: 'Accessories' },
-  { id: 'custom', name: 'Custom Designs' },
+  // { id: 'custom', name: 'Custom Designs' },
 ]
 
-const products = [
-  {
-    id: 1,
-    name: "Handmade Crochet Sweater",
-    category: "ladies",
-    image: "/images/ladies/IMG_20240723_114315.jpg",
-    description: "A cozy and stylish sweater perfect for chilly days.",
-    yarn: "100% Merino Wool",
-    colors: ["Cream", "Navy", "Burgundy"],
-  },
-  {
-    id: 2,
-    name: "Men's Crochet Vest",
-    category: "gents",
-    image: "/images/ladies/IMG_20240723_114315.jpg",
-    description: "A versatile vest that adds a touch of sophistication to any outfit.",
-    yarn: "Cotton Blend",
-    colors: ["Charcoal", "Olive", "Tan"],
-  },
-  {
-    id: 3,
-    name: "Children's Crochet Cardigan",
-    category: "kids",
-    image: "/images/ladies/IMG_20240723_114315.jpg",
-    description: "A adorable and warm cardigan for little ones.",
-    yarn: "Soft Acrylic",
-    colors: ["Pastel Rainbow", "Sky Blue", "Soft Pink"],
-  },
-  {
-    id: 4,
-    name: "Crochet Bucket Hat",
-    category: "accessories",
-    image: "/images/ladies/IMG_20240723_114315.jpg",
-    description: "A trendy and comfortable bucket hat for all seasons.",
-    yarn: "Cotton",
-    colors: ["White", "Black", "Sage Green"],
-  },
-  {
-    id: 5,
-    name: "Custom Crochet Dress",
-    category: "custom",
-    image: "/images/ladies/IMG_20240723_114315.jpg",
-    description: "A unique, made-to-measure dress for special occasions.",
-    yarn: "Customizable",
-    colors: ["Any color of your choice"],
-  },
-  // Add more products here...
-]
 
 export function FilterableGalleryComponent() {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -91,7 +44,7 @@ export function FilterableGalleryComponent() {
     <MaxWidthWrapper>
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Crochet Collection</h2>
+        <h2 className=" text-xl md:text-3xl font-bold font-serif text-center mb-8">Our Crochet Collection</h2>
         
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {categories.map(category => (
@@ -120,7 +73,7 @@ export function FilterableGalleryComponent() {
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-white text-center text-lg font-semibold p-4">
+                <p className="text-white font-serif text-center text-lg font-semibold p-4">
                   {product.name}
                 </p>
               </div>

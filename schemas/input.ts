@@ -10,10 +10,17 @@ export const formSchema = z.object({
     subject: z.string().min(5, {
       message: "Please enter a subject (at least 5 characters).",
     }),
-    inquiryType: z.enum(["general", "custom", "collaboration", "other"], {
+    inquiryType: z.enum(["general", "custom", "collaboration", "partnership", "other"], {
       required_error: "Please select an inquiry type.",
     }),
     message: z.string().min(10, {
       message: "Please enter your message (at least 10 characters).",
     }),
-  })
+  });
+
+export const SubscribeSchema = z.object({
+  email: z.string().email({
+      message: 'Email is required',
+  }),
+});
+  

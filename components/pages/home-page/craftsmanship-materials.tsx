@@ -18,7 +18,7 @@ export function CraftsmanshipMaterialsComponent() {
     <MaxWidthWrapper>
     <section ref={containerRef} className="py-4 md:py-16 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-serif font-bold mb-8 text-center">Craftsmanship & Materials</h2>
+        <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-center">Craftsmanship & Materials</h2>
         <p className="text-lg text-muted-foreground mb-12 text-center max-w-3xl mx-auto">
           {`We pride ourselves on using only the highest quality materials. Our designs primarily
           feature 100% acrylic yarn and cotton yarn, known for their durability, softness, and
@@ -49,8 +49,8 @@ function ParallaxSection({ name, image, description, index }: { name: string, im
   )
 
   return (
-    <div ref={sectionRef} className="mb-24  last:mb-0">
-      <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8`}>
+    <div ref={sectionRef} className="md:mb-24 my-12  last:mb-0">
+      <div className={`flex space-y-10 flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8`}>
         <div className="w-full md:w-1/2">
           <motion.div 
             className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden"

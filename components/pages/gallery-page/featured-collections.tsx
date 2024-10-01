@@ -9,23 +9,23 @@ const collections = [
   {
     id: 'spring',
     title: 'Spring Collection',
-    subtitle: 'Bright & Breezy Crochet Wear',
-    image: '/images/ladies/IMG_20240723_114315.jpg',
-    link: '/collections/spring'
+    subtitle: 'Babies Crochet Wear',
+    image: '/images/kids/IMG-20240927-WA0066.jpg',
+    link: 'https://www.etsy.com/shop/obikelscreations/?etsrc=sdt'
   },
   {
     id: 'winter',
     title: 'Winter Warmth',
     subtitle: 'Cozy Crochet Sweaters',
-    image: '/images/ladies/IMG_20240723_114315.jpg',
-    link: '/collections/winter'
+    image: '/images/ladies/IMG20240608005915_01.jpg',
+    link: 'https://www.etsy.com/shop/obikelscreations/?etsrc=sdt&section_id=49041127'
   },
   {
     id: 'accessories',
     title: 'Handcrafted Accessories',
-    subtitle: 'Scarves, Beanies, and More',
-    image: '/images/ladies/IMG_20240723_114315.jpg',
-    link: '/collections/accessories'
+    subtitle: 'Bucket Hats, Berets, and More',
+    image: '/images/accessories/bucket_hats/_storage_emulated_0_DCIM_.convert_tmp_files_IMG20240427123755_20240921202424.jpg',
+    link: 'https://www.etsy.com/listing/1732328218/the-cotton-candy-bucket-hat?click_key=43d65f01ba3285747e4f41e9b470009ddb78b0da%3A1732328218&click_sum=4237805f&ref=shop_home_feat_4'
   }
 ]
 
@@ -34,7 +34,7 @@ export function FeaturedCollectionsComponent() {
     <MaxWidthWrapper>
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Featured Collections</h2>
+        <h2 className="text-xl md:text-3xl font-bold font-serif text-center mb-12">Featured Collections</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {collections.map((collection) => (
             <div key={collection.id} className="flex flex-col">

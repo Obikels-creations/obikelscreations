@@ -31,8 +31,8 @@ const products: Product[] = [
   },
   {
     id: 3,
-    name: "Bohemian Summer Dress",
-    category: "Dresses",
+    name: "The Oc. ola shrug",
+    category: "Sweeter",
     imageUrl: "/images/ladies/Snapchat-2041477342.jpg",
     description: "Light and airy, perfect for those warm summer days."
   },
@@ -94,7 +94,7 @@ stylish accessory to complete your outfit, we have something to suit your taste.
                   hoveredProduct === product.id ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-white">
+                <div className="absolute inset-0 flex flex-col justify-center text-center items-center p-6 text-white">
                   <h3 className="text-xl font-serif font-semibold mb-2">{product.name}</h3>
                   <p className="text-sm mb-4 text-center">{product.description}</p>
                   <Button variant="outline" asChild className=" border-whit text-black">

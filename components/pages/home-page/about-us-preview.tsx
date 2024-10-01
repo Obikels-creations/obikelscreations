@@ -11,6 +11,12 @@ const carouselImages = [
   '/images/ladies/IMG_20240817_101439.jpg',
   '/images/ladies/IMG_20240622_130853.jpg',
   '/images/ladies/IMG20240531234406_01.jpg',
+  '/images/kids/IMG-20240927-WA0095.jpg',
+  '/images/kids/IMG-20240927-WA0007.jpg',
+  '/images/kids/IMG-20240927-WA0094.jpg',
+  '/images/accessories/bucket_hats/_storage_emulated_0_DCIM_.convert_tmp_files_IMG20240426125728_20240921202424.jpg',
+  '/images/accessories/bucket_hats/_storage_emulated_0_DCIM_.convert_tmp_files_IMG20240427114631_20240921202424.jpg',
+
 ]
 
 export function AboutUsPreviewComponent() {
@@ -67,8 +73,8 @@ export function AboutUsPreviewComponent() {
         <div className="flex flex-col md:flex-row md:items-start items-center justify-between">
           <div className="md:w-1/2 w-full md:text-start text-center mb-8 md:mb-0">
             <div className="flex flex-col items-center text-center md:text-start md:items-start mb-4">
-              <h2 className="text-3xl font-serif font-bold">{`Welcome to Obikels Creations`}</h2>
-              <h3 className='text-base md:text-xl font-serif font-semibold'>{`Where Crochet Meets Couture`}</h3>
+              <h2 className="text-2xl md:text-3xl font-serif font-bold">{`Welcome to Obikels Creations`}</h2>
+              <h3 className='text-base md:text-xl font-serif font-semibold '>{`Where Crochet Meets Couture`}</h3>
             </div>
             <p className="text-lg w-full md:pr-6 text-muted-foreground mb-6">
               {`Your destination for exquisite, handmade crochet

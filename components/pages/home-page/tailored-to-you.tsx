@@ -33,7 +33,7 @@ export function TailoredToYouComponent() {
     <MaxWidthWrapper>
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold font-serif text-center mb-4">Tailored to You</h2>
+        <h2 className="text-2xl md:text-3xl font-bold font-serif text-center mb-4">Tailored to You</h2>
         <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
           {`At Obikels Creations, we believe that fashion should be personal. That's why we
 offer a wide range of made-to-order and customized designs. From classic to
