@@ -1,11 +1,10 @@
 'use client'
 
-import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 const images = [
-  '/Contact.png',
+  '/contactus.png',
   '/contact.png',
 ]
 
@@ -51,9 +50,6 @@ export function ContactHeroSectionComponent() {
         <p className="text-lg md:text-2xl mb-8 shadow-text">
         {`We appreciate your interest in Obikels Creations!`}
         </p>
-        <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-          {`Our Works`}
-        </Button>
       </div>
 
     </div>
