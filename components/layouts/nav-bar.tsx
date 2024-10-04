@@ -28,7 +28,7 @@ export function NavbarComponent() {
   return (
     <div className="flex flex-col font-serif">
       <header className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="md:container flex h-16 items-center justify-between px-6">
+        <div className="md:container flex h-20 items-center justify-between px-6">
           {/* Hamburger Menu for Small Screens */}
           <div className="flex items-center md:hidden">
             <Button onClick={toggleSidebar} aria-label="Toggle Sidebar" className='py-1'>
@@ -49,7 +49,7 @@ export function NavbarComponent() {
           </div>
 
           <div className="flex md:hidden mx-auto  items-center justify-center flex-1">
-            <Link href="/" className="flex items-center justify-center py-2 w-full  mx-auto h-full  shrink-0 ">
+            <Link href="/" className="flex items-center justify-center w-full  mx-auto h-full  shrink-0 ">
               <Image
                 width={100}
                 height={100}
