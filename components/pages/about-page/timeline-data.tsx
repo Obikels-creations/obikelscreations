@@ -94,8 +94,8 @@ vice president of Nigeria, her Excellency Mrs. Dolapo Osinbajo and bestowed with
 an honorary badge for exceptional creativity and craftmanship.`}
             </div>
             <div className="flex gap-2 items-center text-neutral-800 dark:text-neutral-300 text-base md:text-base">
-              {`✅ Additionally, we have
-had the to collaborate with a few outstanding fashion houses such as Mudvii and
+              {`✅ Additionally, we have 
+had the opportunity to collaborate with a few outstanding fashion houses such as Mudvii and
 Tularoo.`} 
             </div>
             <div className="flex gap-2 items-center text-neutral-800 dark:text-neutral-300 text-base md:text-base">

@@ -38,7 +38,7 @@ export function ContactHeroSectionComponent() {
 
       {/* Yarn-like Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-slate-950/30 bg-opacity-30"
+        className="absolute inset-0 z-0 bg-slate-900 bg-opacity-15 bg-slate-950/50 md:bg-opacity-30"
 
       ></div>
 

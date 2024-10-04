@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 const images = [
   '/images/accessories/bucket_hats/IMG_20240428_205406.jpg',
-  '/images/ladies/IMG_20240908_121354.jpg',
+  '/images/accessories/bucket_hats/IMG_20240428_202448.jpg',
   '/images/ladies/1726945990615.jpg',
 ]
 
@@ -49,9 +49,10 @@ export function HeroSectionComponent() {
 
       {/* Yarn-like Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-slate-950/20 bg-opacity-30"
+        className="absolute inset-0 z-0 bg-slate-900 bg-opacity-15 bg-slate-950/50 md:bg-opacity-30"
 
       ></div>
+      {/* <div className="absolute inset-0 z-0 bg-slate-900 bg-opacity-15  md:bg-slate-950/50 md:bg-opacity-30"></div> */}
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
