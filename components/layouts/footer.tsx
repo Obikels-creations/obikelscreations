@@ -132,7 +132,7 @@ export function FooterComponent() {
         
         <div className="mt-8 pt-8 border-t border-primary-foreground flex flex-col md:flex-row justify-between items-center">
           <div className="text-base mb-4 md:mb-0">
-            © 2023 Obikels Creations. All rights reserved.
+            © 2024 Obikels Creations. All rights reserved.
           </div>
           <nav className="flex space-x-4">
             <Link href="/" className="text-base hover:text-purple-300">Privacy Policy</Link>
