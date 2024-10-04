@@ -6,9 +6,9 @@ import Link from "next/link"
 import { useEffect, useState } from 'react'
 
 const images = [
-  '/images/accessories/bucket_hats/IMG_20240428_205406.jpg',
   '/images/accessories/bucket_hats/IMG_20240428_202448.jpg',
-  '/images/ladies/1726945990615.jpg',
+  '/images/ladies/IMG_20240908_121354.jpg',
+  '/IMG-20241004-WA0005.jpg',
 ]
 
 export function HeroSectionComponent() {
@@ -21,13 +21,7 @@ export function HeroSectionComponent() {
     return () => clearInterval(timer)
   }, [])
 
-  // const nextImage = () => {
-  //   setCurrentImage((prevImage) => (prevImage + 1) % images.length)
-  // }
-
-  // const prevImage = () => {
-  //   setCurrentImage((prevImage) => (prevImage - 1 + images.length) % images.length)
-  // }
+ 
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
@@ -69,21 +63,7 @@ export function HeroSectionComponent() {
         </Button>
       </div>
 
-      {/* Navigation Arrows */}
-      {/* <button
-        onClick={prevImage}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
-        aria-label="Previous image"
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      <button
-        onClick={nextImage}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
-        aria-label="Next image"
-      >
-        <ChevronRight className="h-6 w-6" />
-      </button> */}
+
     </div>
   )
 }

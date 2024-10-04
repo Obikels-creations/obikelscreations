@@ -103,7 +103,7 @@ export function NavbarComponent() {
         >
           <div className="flex items-center justify-center py-6 border-b">
             <Link href="/" className="flex items-center space-x-2" onClick={() => setSidebarOpen(false)}>
-              <Image width={80} height={80} src='/assets/Black_and_White_Logo.png' alt='Obikels Creation Logo' />
+              <Image width={80} height={80} src='/assets/logo_trans.png' alt='Obikels Creation Logo' />
             </Link>
           </div>
           <nav className="flex mx-auto justify-center items-center gap-6 text-black flex-col p-6 space-y-4">
