@@ -9,8 +9,8 @@ import Image from 'next/image'
 
 const steps = [
   { icon: '/assets/pallete.png', title: "Choose Your Design", description: "Browse our collection and select your favorite style." },
-  { icon: '/assets/hook.png', title: "Select Your Yarn", description: "Pick from our premium yarn selection for your perfect piece." },
-  { icon: '/assets/yarn.png', title: "Perfect Fit, Handcrafted for You", description: "We'll create your custom piece with care and precision." },
+  { icon: '/assets/yarn.png', title: "Select Your Yarn", description: "Pick from our premium yarn selection for your perfect piece." },
+  { icon: '/assets/hook.png', title: "Perfect Fit, Handcrafted for You", description: "We'll create your custom piece with care and precision." },
 ]
 
 const yarnTypes = [
@@ -52,11 +52,12 @@ perfect fit.`}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <Image
-              height={14}
-              width={14}
+              height={100}
+              width={100}
               src={step.icon}
               alt={step.title}
-              className='w-14 h-14 mb-4'
+              quality={100}
+              className='w-20 h-20 mb-4'
               />
               <h3 className="text-xl font-serif font-semibold mb-2">{step.title}</h3>
               <p className="text-sm max-w-[200px]">{step.description}</p>

@@ -46,7 +46,7 @@ const products: Product[] = [
   {
     id: 5,
     name: "OC odumodu blc bucket hat",
-    category: "Accessories",
+    category: "Bucket Hat",
     imageUrl: "/images/accessories/bucket_hats/IMG_20240428_202448.jpg",
     description: "Hand made crochet bucket hat made from 100% acrylic yarn."
   },
