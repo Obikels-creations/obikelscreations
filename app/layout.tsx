@@ -20,8 +20,11 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Obikels Creations",
-  description: "Where Crochet Meets Couture",
+  title: {
+    template:'Obikels Creations | %s',
+  default: 'Obikels Creations',
+},
+description: 'Where Crochet Meets Couture',
 };
 
 export default function RootLayout({
