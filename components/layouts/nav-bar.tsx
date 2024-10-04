@@ -37,12 +37,23 @@ export function NavbarComponent() {
           </div>
 
           {/* Logo Centered */}
-          <div className="flex items-center justify-center flex-1">
+          <div className="md:flex hidden items-center justify-center flex-1">
             <Link href="/" className="flex items-start w-[50px]  mx-auto h-[50px] md:w-full md:h-full shrink-0 space-x-6">
               <Image
                 width={80}
                 height={80}
                 src='/assets/Black_and_White_Logo.png'
+                alt='Obikels Creation Logo'
+              />
+            </Link>
+          </div>
+
+          <div className="flex md:hidden  items-center justify-center flex-1">
+            <Link href="/" className="flex items-start w-[50px]  mx-auto h-[50px] md:w-full md:h-full shrink-0 space-x-6">
+              <Image
+                width={100}
+                height={100}
+                src='/assets/logo_trans.png'
                 alt='Obikels Creation Logo'
               />
             </Link>
