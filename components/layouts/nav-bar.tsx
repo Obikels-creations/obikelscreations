@@ -31,8 +31,8 @@ export function NavbarComponent() {
         <div className="md:container flex h-16 items-center justify-between px-6">
           {/* Hamburger Menu for Small Screens */}
           <div className="flex items-center md:hidden">
-            <Button onClick={toggleSidebar} aria-label="Toggle Sidebar">
-              {sidebarOpen ? <FiX className="text-2xl" /> : <FiMenu className="text-4xl py-2" />}
+            <Button onClick={toggleSidebar} aria-label="Toggle Sidebar" className='py-1'>
+              {sidebarOpen ? <FiX className="text-2xl" /> : <FiMenu className="text-4xl" />}
             </Button>
           </div>
 
