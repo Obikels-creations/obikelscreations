@@ -32,7 +32,7 @@ export function NavbarComponent() {
           {/* Hamburger Menu for Small Screens */}
           <div className="flex items-center md:hidden">
             <Button onClick={toggleSidebar} aria-label="Toggle Sidebar">
-              {sidebarOpen ? <FiX className="text-2xl" /> : <FiMenu className="text-4xl" />}
+              {sidebarOpen ? <FiX className="text-2xl" /> : <FiMenu className="text-4xl py-2" />}
             </Button>
           </div>
 
