@@ -6,7 +6,7 @@ import Link from "next/link"
 import { useEffect, useState } from 'react'
 
 const images = [
-  '/IMG-20190607-WA0033.jpg',
+  '/PSX_20190607_183751.jpg',
   '/IMG-20190619-WA0005.jpg',
   '/IMG_0143~3.JPG',
 ]

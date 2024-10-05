@@ -11,7 +11,7 @@ import { products } from '@/lib/consts'
 const categories = [
   { id: 'all', name: 'All' },
   { id: 'ladies', name: 'Ladies Fashion' },
-  // { id: 'gents', name: 'Gents Fashion' },
+  { id: 'ponchos', name: 'Ladies Ponchos' },
   { id: 'kids', name: 'Kids' },
   { id: 'accessories', name: 'Accessories' },
   // { id: 'custom', name: 'Custom Designs' },
