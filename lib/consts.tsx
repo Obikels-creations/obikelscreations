@@ -61,6 +61,6 @@ export const products: Product[] = [
   { id: 57, name: "OC Sweater ", yarn: "Customizable", colors: ["Any color of your choice"], description: "Hand made ladies sweater made from 100% acrylic yarn", image: "/images/ponchos/IMG_20210617_200851_492.jpg", category: "ponchos" },
   { id: 58, name: "OC Ponchos ", yarn: "Customizable", colors: ["Any color of your choice"], description: "Hand made ladies ponchos made from 100% acrylic yarn", image: "/images/ponchos/IMG_20230325_181239.jpg", category: "ponchos" },
   { id: 59, name: "OC Ponchos ", yarn: "Customizable", colors: ["Any color of your choice"], description: "Hand made ladies ponchos made from 100% acrylic yarn", image: "/images/ponchos/IMG_20230325_181323.jpg", category: "ponchos" },
-  { id: 59, name: "OC Ponchos ", yarn: "Customizable", colors: ["Any color of your choice"], description: "Hand made ladies ponchos made from 100% acrylic yarn", image: "/images/ponchos/IMG_20230325_181339.jpg", category: "ponchos" },
+  { id: 60, name: "OC Ponchos ", yarn: "Customizable", colors: ["Any color of your choice"], description: "Hand made ladies ponchos made from 100% acrylic yarn", image: "/images/ponchos/IMG_20230325_181339.jpg", category: "ponchos" },
   
 ];
