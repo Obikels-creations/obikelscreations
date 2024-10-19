@@ -6,9 +6,9 @@ import Link from "next/link"
 import { useEffect, useState } from 'react'
 
 const images = [
-  '/IMG-20190607-WA0033.jpg',
-  '/IMG-20190619-WA0005.jpg',
   '/PSX_20190607_183751.jpg',
+  '/IMG-20190619-WA0005.jpg',
+  '/IMG_0143~3.JPG',
 ]
 
 export function AboutHeroSectionComponent() {
@@ -40,8 +40,8 @@ export function AboutHeroSectionComponent() {
         />
       ))}
 
-      <div 
-        className="absolute inset-0 bg-gray-800 opacity-50 md:bg-gray-800/25 md:opacity-30"
+<div 
+        className="absolute inset-0 z-0 bg-slate-900 bg-opacity-15 bg-slate-950/50 md:bg-opacity-30"
 
       ></div>
 

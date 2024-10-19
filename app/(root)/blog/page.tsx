@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 	title:{
 		absolute:  'Blog | Latest Insight',
 	},
-	description: 'Stay in the loop with the latest happenings in tech!',
-	metadataBase: new URL('https://www.palmtechniq.com/blog'),
+	description: 'Stay in the loop with the latest happenings in Obikels Creations!',
+	metadataBase: new URL('https://www.obikelscreations.co.uk/blog'),
 	alternates:{
 	  canonical: '/blog',
 	  languages: {
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
 	  title: {
 		absolute: 'Blog',
 	  },
-	  description: 'Stay in the loop with the latest happenings in tech!',
-	  url: 'https://www.palmtechniq.com/blog',
-	  siteName: 'PalmTechnIQ',
-	  images: '/jopwe.jpg'
+	  description: 'Stay in the loop with the latest happenings in Obikels Creations!',
+	  url: 'https://www.obikelscreations.co.uk/blog',
+	  siteName: 'Obikels Creations',
+	  images: '/IMG-20190619-WA0005.jpg'
 	}
 }
 

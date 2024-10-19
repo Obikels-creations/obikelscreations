@@ -1,17 +1,16 @@
 'use client'
-
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Palette, Ruler, Scissors } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import MaxWidthWrapper from '@/components/layouts/max-width-wrapper'
+import Image from 'next/image'
 
 const steps = [
-  { icon: Palette, title: "Choose Your Design", description: "Browse our collection and select your favorite style." },
-  { icon: Ruler, title: "Select Your Yarn", description: "Pick from our premium yarn selection for your perfect piece." },
-  { icon: Scissors, title: "Perfect Fit, Handcrafted for You", description: "We'll create your custom piece with care and precision." },
+  { icon: '/assets/pallete.png', title: "Choose Your Design", description: "Browse our collection and select your favorite style." },
+  { icon: '/assets/yarn.png', title: "Select Your Yarn", description: "Pick from our premium yarn selection for your perfect piece." },
+  { icon: '/assets/hook.png', title: "Perfect Fit, Handcrafted for You", description: "We'll create your custom piece with care and precision." },
 ]
 
 const yarnTypes = [
@@ -33,7 +32,7 @@ export function TailoredToYouComponent() {
     <MaxWidthWrapper>
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold font-serif text-center mb-4">Tailored to You</h2>
+        <h2 className="text-2xl md:text-3xl font-bold font-serif text-center mb-4">Crafted to You</h2>
         <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
           {`At Obikels Creations, we believe that fashion should be personal. That's why we
 offer a wide range of made-to-order and customized designs. From classic to
@@ -52,7 +51,14 @@ perfect fit.`}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <step.icon className="w-12 h-12 mb-4" />
+              <Image
+              height={100}
+              width={100}
+              src={step.icon}
+              alt={step.title}
+              quality={100}
+              className='w-20 h-20 mb-4'
+              />
               <h3 className="text-xl font-serif font-semibold mb-2">{step.title}</h3>
               <p className="text-sm max-w-[200px]">{step.description}</p>
             </motion.div>

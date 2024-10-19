@@ -32,28 +32,28 @@ const products: Product[] = [
   {
     id: 3,
     name: "The Oc. ola shrug",
-    category: "Sweeter",
+    category: "Shrugs",
     imageUrl: "/images/ladies/Snapchat-2041477342.jpg",
     description: "Light and airy, perfect for those warm summer days."
   },
   {
     id: 4,
     name: "OC color-wave bucket hat",
-    category: "Accessories",
+    category: "Bucket Hats",
     imageUrl: "/images/accessories/bucket_hats/_storage_emulated_0_DCIM_.convert_tmp_files_IMG20240427114639_20240921202424.jpg",
     description: "Hand made crochet bucket-hat made from 100% acrylic yarn."
   },
   {
     id: 5,
     name: "OC odumodu blc bucket hat",
-    category: "Accessories",
+    category: "Bucket Hats",
     imageUrl: "/images/accessories/bucket_hats/IMG_20240428_202448.jpg",
     description: "Hand made crochet bucket hat made from 100% acrylic yarn."
   },
   {
     id: 6,
     name: "The OC berets",
-    category: "Accessories",
+    category: "Berets",
     imageUrl: "/images/accessories/beret/Snapchat-2052450638.jpg",
     description: "Our crochet berets are uniqly designed and can be customised to your taste and style."
   }

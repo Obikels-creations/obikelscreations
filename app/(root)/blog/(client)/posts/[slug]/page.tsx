@@ -5,10 +5,13 @@ import Image from "next/image";
 import { PortableText } from "next-sanity";
 import { urlFor } from "../../../../../../sanity/lib/image";
 import MaxWidthWrapper from "@/components/layouts/max-width-wrapper";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 
-async function getPost(slug: string) {
+async function getPost(slug: string): Promise<IPost> {
      const query = `*[_type == "post" && slug.current== "${slug}"][0]{
+  _id
   title,
   slug,
   publisheddatetime,
@@ -21,44 +24,39 @@ async function getPost(slug: string) {
     slug
   }
 }`;
-     const post = await client.fetch(query);
+     const post: IPost = await client.fetch(query);
      return post;
 }
 
-// GEBRETAFRE_TRATEYH{}
+export async function generateMetadata({
+     params, 
+}: {
+     params: {blog: string};
+}): Promise<Metadata> {
+     const blogPost = await getPost(params.blog);
 
-
-// // Generate metadata based on post data
-// export async function generateMetadata({
-//      params,
-// }: {
-//      params: {blog: string};
-// }): Promise<Metadata> {
-//      const blogPost = await getPost(params.blog);
-     
-//      if (!blogPost) {
-//           notFound();
-//      }
-
-//      return {
-//           title: blogPost.title,
-//           description: blogPost.excerpt,
-//           openGraph: {
-//                title: blogPost.title,
-//                description: blogPost.excerpt,
-//                url: `https://www.palmtechniq.com/blog/${params.blog}`,
-//                siteName: 'PalmTechnIQ',
-//                images: [
-//                     {
-//                          url: blogPost.overviewImage || '/innovation.jpg',
-//                          width: 800,
-// 					height: 600,
-// 					alt: blogPost.title || "PalmTechnIQ",
-//                     }
-//                ]
-//           }
-//      }
-// }
+     if(!blogPost) {
+          notFound();
+     }
+     return {
+          title: blogPost.title,
+          description: blogPost.excerpt,
+          openGraph: {
+               title: blogPost.title,
+               description: blogPost.excerpt,
+               url: `https://www.obikelscreations.co.uk/blog/${params.blog}`,
+               siteName: 'Obikels Creations',
+               images: [
+                    {
+                         url: blogPost.overviewImage,
+                         width: 800,
+                         height: 600,
+                         alt: blogPost.title
+                    }
+               ]
+          }
+     }
+}
 
 const SinglePage = async ({ params }: ISingleBlog) => {
      const PortableTextComponent = {

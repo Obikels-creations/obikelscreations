@@ -6,6 +6,8 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import MaxWidthWrapper from "../layouts/max-width-wrapper";
+import { Badge } from "./badge";
+import Link from "next/link";
 
 interface TimelineEntry {
   title: string;
@@ -87,7 +89,20 @@ unique, handcrafted garments. `}
           />
         </div>
       </div>
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+
+      <div className="max-w-7xl mx-auto py-20 space-y-4 px-4 md:px-8 lg:px-10">
+      <h3 className="text-neutral-700 dark:text-neutral-300 font-medium text-lg md:text-xl">{`Checkout Our Brand Publications`}</h3>
+       <div className="grid md:grid-cols-2 items-center justify-center gap-4">
+        <Badge className="bg-gray-800 w-full text-center justify-center text-base md:text-lg">
+          <Link href='https://ukft.org/member-spotlight-obikels-creations/'>{`Member spotlight: The story of Obikels Creations`}</Link>
+        </Badge>
+        <Badge className="bg-gray-800 w-full text-center justify-center text-base md:text-lg">
+          <Link href='https://allure.vanguardngr.com/2024/05/crochet-couture-obikels-creations-leading-the-charge/'>{`Obikels Creations Leading the Charge`}</Link>
+        </Badge>
+        <Badge className="bg-gray-800 w-full text-center justify-center text-base md:text-lg">
+          <Link href='https://www.citypeopleonline.com/how-obikels-crochet-became-crochets-rising-star/'>{`How Obikels Crochet Became Crochet’s Rising Star`}t</Link>
+        </Badge>
+        </div>
         <p className="text-neutral-700 dark:text-neutral-300 font-medium text-lg md:text-xl max-w-xl">
           {`Thank you for choosing Obikels Creations Ltd. We invite you to join us on this
 exciting journey of creativity and passion.`}

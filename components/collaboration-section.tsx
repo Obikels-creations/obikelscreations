@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const partners = [
   { name: 'Mudvii', logo: '/images/brands/IMG_20240926_115630.jpg' },
   { name: 'Tu-La-Roo', logo: '/images/brands/IMG_20240926_115720.jpg' },
-  { name: 'Iamteejaybee', logo: '/images/brands/IMG-20240918-WA0004.jpg' },
+  { name: 'New Horizon ', logo: '/images/brands/new_horizon.jpeg' },
   { name: 'Iamteejaybee', logo: '/images/brands/IMG-20240918-WA0006.jpg' },
 
 ]
