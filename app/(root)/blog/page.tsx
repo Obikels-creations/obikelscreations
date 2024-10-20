@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 // Function to fetch a specific post by slug
 async function getPost() {
-     const query = `*[_type == "post"]{
+     const query = `*[ _type == "post"] {
   title,
   slug,
   publisheddatetime,
@@ -56,12 +56,14 @@ export const revalidate = 60;
 export default async function Blog() {
      // Fetch all posts or adjust if needed
      const posts: IPost[] = await getPost();
+     
+     
      return (
           <MaxWidthWrapper className='my-12'>
           <div className="mx-auto  p-[20px]">
                <h1 className="text-2xl pt-3 font-bold">The Obikels Creations Time Square</h1>
                <p>
-                    Let's keep you <u className="font-bold">Up-To-Date</u>
+                    Lets keep you <u className="font-bold">Up-To-Date</u>
                </p>
 
                <div className="mt-[20px] flex w-full flex-col flex-wrap justify-center gap-3 pb-[30px] md:flex-row">

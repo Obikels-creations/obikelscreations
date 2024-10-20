@@ -31,8 +31,8 @@ export const post = {
                title: "Excerpt",
                type: "text",
                validation: (Rule: Rule) =>
-                    Rule.max(200).error(
-                         "Expected a max of 200 characters but got more",
+                    Rule.max(300).error(
+                         "Expected a max of 300 characters but got more",
                     ),
           },
           {
@@ -50,10 +50,14 @@ export const post = {
                     { type: "block" },
                     {
                          type: "image",
-                         field: [{ type: "text", name: "alt", title: "Alt" }],
+                         fields: [{ type: "text", name: "alt", title: "Alt" }],
                     },
                ],
           },
+          // {
+          //      name: "author",
+          //      title: "Author",
+          // },
           {
                name: "tag",
                title: "Tag",

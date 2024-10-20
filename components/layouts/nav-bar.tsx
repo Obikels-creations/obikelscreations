@@ -100,7 +100,7 @@ export function NavbarComponent() {
               </MenuItem>
             </Menu>
 
-            <Link href="/contact" className={`font-medium transition-colors hover:text-primary ${getActiveState('/blog')}`}>
+            <Link href="/blog" className={`font-medium transition-colors hover:text-primary ${getActiveState('/blog')}`}>
               <FiBell className="inline mr-2" /> Blog
             </Link>
             <Link href="/contact" className={`font-medium transition-colors hover:text-primary ${getActiveState('/contact')}`}>
@@ -130,7 +130,7 @@ export function NavbarComponent() {
             <Link href="/gallery" className={`font-medium flex items-center space-x-2 hover:text-primary ${getActiveState('/gallery')}`} onClick={() => setSidebarOpen(false)}>
               <FiImage className="text-lg" /> <span>Gallery</span>
             </Link>
-            <Link href="/contact" className={`font-medium flex items-center space-x-2 hover:text-primary ${getActiveState('/blog')}`} onClick={() => setSidebarOpen(false)}>
+            <Link href="/blog" className={`font-medium flex items-center space-x-2 hover:text-primary ${getActiveState('/blog')}`} onClick={() => setSidebarOpen(false)}>
               <FiBell className="text-lg" /> <span>Blog</span>
             </Link>
             <Link href="/contact" className={`font-medium flex items-center space-x-2 hover:text-primary ${getActiveState('/contact')}`} onClick={() => setSidebarOpen(false)}>

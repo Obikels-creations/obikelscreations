@@ -1,17 +1,50 @@
-
-import React from "react";
-import { client} from '../../../../../../sanity/lib/client'
-import Image from "next/image";
-import { PortableText } from "next-sanity";
-import { urlFor } from "../../../../../../sanity/lib/image";
 import MaxWidthWrapper from "@/components/layouts/max-width-wrapper";
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { PortableText } from "next-sanity";
+import Image from "next/image";
+import { client } from '../../../../../../sanity/lib/client';
+import { urlFor } from "../../../../../../sanity/lib/image";
 
+/**
+ * This function aids the caching of the blog posts
+ */
+// export async function generateStaticParams({ params }: ISingleBlog) {
+//      const posts: IPost[] = await getPost(params.slug);
 
-async function getPost(slug: string): Promise<IPost> {
+//      return posts.map(({slug}) => slug)
+
+// }
+
+/**
+ * This function is used to dynamically generate metadata for each blog post
+ */
+export async function generateMetadata({
+     params: {slug},
+     }: ISingleBlog ): Promise<Metadata> {
+          const blogPost: IPost = await getPost(slug);
+     
+          return {
+               title: blogPost.title,
+               description: blogPost.excerpt,
+               // openGraph: {
+               //      title: blogPost.title,
+               //      description: blogPost.excerpt,
+               //      url: `https://www.obikelscreations.co.uk/blog/${slug}`,
+               //      siteName: 'Obikels Creations',
+               //      images: [
+               //           {
+               //                url: blogPost.overviewImage,
+               //                width: 800,
+               //                height: 600,
+               //                alt: blogPost.title
+               //           }
+               //      ]
+               // }
+          }
+}
+
+async function getPost(slug: string) {
      const query = `*[_type == "post" && slug.current== "${slug}"][0]{
-  _id
   title,
   slug,
   publisheddatetime,
@@ -24,40 +57,9 @@ async function getPost(slug: string): Promise<IPost> {
     slug
   }
 }`;
-     const post: IPost = await client.fetch(query);
+     const post = await client.fetch(query);
      return post;
 }
-
-export async function generateMetadata({
-     params, 
-}: {
-     params: {blog: string};
-}): Promise<Metadata> {
-     const blogPost = await getPost(params.blog);
-
-     if(!blogPost) {
-          notFound();
-     }
-     return {
-          title: blogPost.title,
-          description: blogPost.excerpt,
-          openGraph: {
-               title: blogPost.title,
-               description: blogPost.excerpt,
-               url: `https://www.obikelscreations.co.uk/blog/${params.blog}`,
-               siteName: 'Obikels Creations',
-               images: [
-                    {
-                         url: blogPost.overviewImage,
-                         width: 800,
-                         height: 600,
-                         alt: blogPost.title
-                    }
-               ]
-          }
-     }
-}
-
 const SinglePage = async ({ params }: ISingleBlog) => {
      const PortableTextComponent = {
           types: {
@@ -82,7 +84,7 @@ const SinglePage = async ({ params }: ISingleBlog) => {
                <hr />
                <div className="p-[10px]">
                     <p className="text-[13px]">
-                         Published on:{" "}
+                    Published on:{" "}
                          {new Date(post.publisheddatetime).toDateString()}{" "}
                     </p>
                     <Image
@@ -99,7 +101,7 @@ const SinglePage = async ({ params }: ISingleBlog) => {
                                    components={PortableTextComponent}
                               />
                          </div>
-                         <div className="my-5 flex cursor-default flex-wrap gap-2 text-sm font-bold">
+                         <div className="my-5 flex cursor-default flex-wrap gap-2 text-[9px] font-bold">
                               {post?.tag?.map((tag) => (
                                    <span
                                         className="rounded-full bg-primary px-[11px] py-[7px] text-white"
@@ -111,6 +113,7 @@ const SinglePage = async ({ params }: ISingleBlog) => {
                          </div>
                     </div>
                </div>
+
           </div>
           </MaxWidthWrapper>
      );
