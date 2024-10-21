@@ -4,16 +4,18 @@ import { PortableText } from "next-sanity";
 import Image from "next/image";
 import { client } from '../../../../../../sanity/lib/client';
 import { urlFor } from "../../../../../../sanity/lib/image";
-
+import { getAllPost} from "../../../page";
 /**
  * This function aids the caching of the blog posts
  */
-// export async function generateStaticParams({ params }: ISingleBlog) {
-//      const posts: IPost[] = await getPost(params.slug);
+export async function generateStaticParams() {
+     const posts: IPost[] = await getAllPost();
 
-//      return posts.map(({slug}) => slug)
+     return posts.map((post) => {
+          post.slug
+     })
 
-// }
+}
 
 /**
  * This function is used to dynamically generate metadata for each blog post

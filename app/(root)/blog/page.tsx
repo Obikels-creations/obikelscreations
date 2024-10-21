@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 }
 
 // Function to fetch a specific post by slug
-async function getPost() {
+export async function getAllPost() {
      const query = `*[ _type == "post"] {
   title,
   slug,
@@ -55,7 +55,7 @@ export const revalidate = 60;
 
 export default async function Blog() {
      // Fetch all posts or adjust if needed
-     const posts: IPost[] = await getPost();
+     const posts: IPost[] = await getAllPost();
      
      
      return (
