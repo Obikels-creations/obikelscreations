@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 }
 
 // Function to fetch a specific post by slug
-export async function getAllPost() {
+async function getAllPost() {
      const query = `*[ _type == "post"] {
   title,
   slug,

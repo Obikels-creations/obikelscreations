@@ -4,10 +4,28 @@ import { PortableText } from "next-sanity";
 import Image from "next/image";
 import { client } from '../../../../../../sanity/lib/client';
 import { urlFor } from "../../../../../../sanity/lib/image";
-import { getAllPost} from "../../../page";
 /**
  * This function aids the caching of the blog posts
  */
+async function getAllPost() {
+     const query = `*[ _type == "post"] {
+  title,
+  slug,
+  publisheddatetime,
+  excerpt,
+  overviewImage,
+  body,
+  tag[]->{
+    name,
+    _id,
+    slug
+  }
+}`;
+     const data = await client.fetch(query);
+     return data;
+}
+
+
 export async function generateStaticParams() {
      const posts: IPost[] = await getAllPost();
 
