@@ -13,6 +13,10 @@ export default async function Image({ params }: { params: { slug: string } }) {
   const post = await fetch(`https://.../posts/${params.slug}`).then((res) =>
     res.json()
   )
+
+  const interSemiBold = fetch(
+    new URL('/app/fonts/Inter-SemiBold.ttf', import.meta.url)
+  ).then((res) => res.arrayBuffer())
  
   return new ImageResponse(
     (
@@ -32,6 +36,14 @@ export default async function Image({ params }: { params: { slug: string } }) {
     ),
     {
       ...size,
+      fonts: [
+        {
+          name: 'Inter',
+          data: await interSemiBold,
+          style: 'normal',
+          weight: 400,
+        },
+      ],
     }
   )
 }
