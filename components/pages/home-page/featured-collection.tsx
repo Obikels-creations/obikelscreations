@@ -1,10 +1,8 @@
 'use client'
 
-import { useState } from 'react'
-import Image from 'next/image'
-import { Button } from "@/components/ui/button"
 import MaxWidthWrapper from '@/components/layouts/max-width-wrapper'
-import Link from 'next/link'
+import Image from 'next/image'
+import { useState } from 'react'
 
 interface Product {
   id: number
