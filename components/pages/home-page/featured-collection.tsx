@@ -20,14 +20,14 @@ const products: Product[] = [
     name: "The Oc. Crop top brallets",
     category: "Crop-Top",
     imageUrl: "/images/ladies/IMG_20240723_114315.jpg",
-    description: "The Oc crochet ballet crop top is hand made specially from acrylic yarn."
+    description: "The Oc crochet brallet crop top is hand made specially from acrylic yarn."
   },
   {
     id: 2,
-    name: "The Oc. Crop top brallets",
+    name: "OC graphics jumper",
     category: "Crop-Top",
-    imageUrl: "/images/ladies/IMG_20240723_114049.jpg",
-    description: "The Oc crochet ballet crop top is hand made specially from acrylic yarn."
+    imageUrl: "/images/ladies/OC_graphics_jumper.jpg",
+    description: "The Oc graphics jumper is hand made specially from acrylic yarn."
   },
   {
     id: 3,
@@ -38,10 +38,10 @@ const products: Product[] = [
   },
   {
     id: 4,
-    name: "OC color-wave bucket hat",
+    name: "The OC odumodu color series",
     category: "Bucket Hats",
-    imageUrl: "/images/accessories/bucket_hats/_storage_emulated_0_DCIM_.convert_tmp_files_IMG20240427114639_20240921202424.jpg",
-    description: "Hand made crochet bucket-hat made from 100% acrylic yarn."
+    imageUrl: "/images/accessories/bucket_hats/the_OC_odumodu_color_series.jpg",
+    description: "The OC odumodu color series."
   },
   {
     id: 5,
@@ -97,11 +97,6 @@ stylish accessory to complete your outfit, we have something to suit your taste.
                 <div className="absolute inset-0 flex flex-col justify-center text-center items-center p-6 text-white">
                   <h3 className="text-xl font-serif font-semibold mb-2">{product.name}</h3>
                   <p className="text-sm mb-4 text-center">{product.description}</p>
-                  <Button variant="outline" asChild className=" border-whit text-black">
-                    <Link href='https://www.obikelscreations.etsy.com'>
-                    Shop Now
-                    </Link>
-                  </Button>
                 </div>
               </div>
               <div className="absolute bottom-0 left-0 bg-primary text-primary-foreground px-3 py-1 text-sm">

@@ -88,7 +88,7 @@ export function NavbarComponent() {
                     title="OC crop top brallets"
                     href="/gallery"
                     src="/images/ladies/IMG_20240723_114049.jpg"
-                    description="The Oc crochet ballet crop top is hand made specially from acrylic yarn."
+                    description="The Oc crochet brallet crop top is hand made specially from acrylic yarn."
                   />
                   <ProductItem
                     title="The Mesh bucket hat"
