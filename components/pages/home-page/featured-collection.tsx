@@ -23,7 +23,7 @@ const products: Product[] = [
   {
     id: 2,
     name: "OC graphics jumper",
-    category: "Crop-Top",
+    category: "Jumper",
     imageUrl: "/images/ladies/OC_graphics_jumper.jpg",
     description: "The Oc graphics jumper is hand made specially from acrylic yarn."
   },
